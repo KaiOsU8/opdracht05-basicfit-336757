@@ -89,30 +89,46 @@ $result = $statement->fetch(PDO::FETCH_OBJ);
     <form action="update.php" method="post">
 
         <label for="homeclub">Kies je homeclub:</label><br>
-        <input type="radio" name="homeclub" id="homeclub" value="<?php echo $result->Homeclub; ?>"><br><br>
+        <select name="homeclub" id="homeclub">
+            <option value="">Kies je locatie</option>
+            <option value="<?php if ($result->Homeclub == "Franciscusdreef 80") { echo $result->Homeclub;} ?>">Franciscusdreef 80</option>
+            <option value="<?php if ($result->Homeclub == "Middenweteringen 21") { echo $result->Homeclub;} ?>">Middenweteringen 21</option>
+            <option value="<?php if ($result->Homeclub == "Zonnebaan 22") { echo $result->Homeclub;} ?>">Zonnebaan 22</option>
+            <option value="<?php if ($result->Homeclub == "Moreelsehoek 2") { echo $result->Homeclub;} ?>">Moreelsehoek 2</option>
+            <option value="<?php if ($result->Homeclub == "Van Heuven Goedhartplein 13") { echo $result->Homeclub;} ?>">Van Heuven Goedhartplein 13</option>
+            <option value="<?php if ($result->Homeclub == "Europaplein 705") { echo $result->Homeclub;} ?>">Europaplein 705</option>
+            <option value="<?php if ($result->Homeclub == "Herculesplein 375-77") { echo $result->Homeclub;} ?>">Herculesplein 375-77</option>
+        </select><br><br>
+
+
+        <h3>Selecteer een lidmaatschap</h3>
+        <label for="comfort">Comfort</label><br>
+        <input type="radio" name="lidmaatschap" id="comfort" value="<?php if ($result->Lidmaatschap == "comfort") { echo 'checked';} ?>"><br>
+        <label for="premium">Premium</label><br>
+        <input type="radio" name="lidmaatschap" id="premium" value="<?php if ($result->Lidmaatschap == "premium") { echo 'checked';} ?>"><br>
+        <label for="all">All in</label><br>
+        <input type="radio" name="lidmaatschap" id="all" value="<?php if ($result->Lidmaatschap == "all") { echo 'checked';} ?>"><br><br>
+
+
+        <h3>Looptijd:</h3>
+        <label for="jaarlidmaatschap">Jaarlidmaatschap</label><br>
+        <input type="radio" name="looptijd" id="jaarlidmaatschap" value="<?php if ($result->Looptijd == "jaarlidmaatschap") { echo 'checked';} ?>"><br>
+        <label for="flex">Flex optie</label><br>
+        <input type="radio" name="looptijd" id="flex" value="<?php if ($result->Looptijd == "flex") { echo 'checked';} ?>"><br>
 
 
 
 
+        <h3>Selecteer je extra's</h3>
+        <label for="yanga">Yanga sportswater Є2,50 per 4 weken</label><br>
+        <input type="checkbox" name="yanga" id="yanga" value="<?php echo $result->Yanga; ?>"><br>
 
+        <label for="coach">Personal online coach Є60,00 eenmalig</label><br>
+        <input type="checkbox" name="coach" id="coach" value="<?php echo $result->Coach; ?>"><br>
 
+        <label for="training">Personal training intro Є25,00 eenmalig</label><br>
+        <input type="checkbox" name="training" id="training" value="<?php echo $result->Training; ?>"><br><br><br>
 
-
-
-        <label for="infix">Tussenvoegsel:</label><br>
-        <select name="infix" id="infix" value="<?php echo $result->Tussenvoegsel; ?>"><br><br>
-
-        <label for="lastname">Achternaam:</label><br>
-        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
-        
-        <label for="lastname">Achternaam:</label><br>
-        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
-        
-        <label for="lastname">Achternaam:</label><br>
-        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
-        
-        <label for="lastname">Achternaam:</label><br>
-        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
 
         <label for="email">E-mail</label><br>
         <input type="text" name="email" id="email" value="<?php echo $result->Email; ?>"><br>

@@ -12,7 +12,7 @@
     <h1>Basic-Fit Utrecht</h1>
 
     <form action="create.php" method="post">
-        
+
         <label for="homeclub">Kies je homeclub:</label><br>
         <select name="homeclub" id="homeclub">
             <option value="">Kies je locatie</option>
@@ -43,13 +43,13 @@
 
 
         <h3>Selecteer je extra's</h3>
-        <label for="yanga">Yanga</label><br>
+        <label for="yanga">Yanga sportswater Є2,50 per 4 weken</label><br>
         <input type="checkbox" name="yanga" id="yanga"><br>
 
-        <label for="coach">Coach</label><br>
+        <label for="coach">Personal online coach Є60,00 eenmalig</label><br>
         <input type="checkbox" name="coach" id="coach"><br>
 
-        <label for="training">Training</label><br>
+        <label for="training">Personal training intro Є25,00 eenmalig</label><br>
         <input type="checkbox" name="training" id="training"><br><br><br>
 
         <label for="email">E-mail</label><br>
