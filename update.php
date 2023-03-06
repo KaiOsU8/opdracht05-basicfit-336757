@@ -22,10 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Maak een update query voor het updaten van een record
         $sql = "UPDATE Inschrijving
-                SET Voornaam = :Voornaam,
-                    Tussenvoegsel = :Tussenvoegsel,
-                    Achternaam = :Achternaam,
-                    Telefoonnummer = :Telefoonnummer
+                SET Homeclub = :Homeclub,
+                    Lidmaatschap = :Lidmaatschap,
+                    Looptijd = :Looptijd,
+                    Yanga = :Yanga,
+                    Coach = :Coach,
+                    Training = :Training,
+                    Email = :Email
                 WHERE Id = :Id";
 
         // Roep de prepare-method aan van het PDO-object $pdo
@@ -33,10 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // We moeten de placeholders een waarde geven in de sql-query
         $statement->bindValue(':Id', $_POST['Id'], PDO::PARAM_INT);
-        $statement->bindValue(':Voornaam', $_POST['firstname'], PDO::PARAM_STR);
-        $statement->bindValue(':Tussenvoegsel', $_POST['infix'], PDO::PARAM_STR);
-        $statement->bindValue(':Achternaam', $_POST['lastname'], PDO::PARAM_STR);
-        $statement->bindValue(':Telefoonnummer', $_POST['number'], PDO::PARAM_STR);
+        $statement->bindValue(':Homeclub', $_POST['homeclub'], PDO::PARAM_STR);
+        $statement->bindValue(':Lidmaatschap', $_POST['lidmaatschap'], PDO::PARAM_STR);
+        $statement->bindValue(':Looptijd', $_POST['looptijd'], PDO::PARAM_STR);
+        $statement->bindValue(':Yanga', $_POST['yanga'], PDO::PARAM_STR);
+        $statement->bindValue(':Coach', $_POST['coach'], PDO::PARAM_STR);
+        $statement->bindValue(':Training', $_POST['training'], PDO::PARAM_STR);
+        $statement->bindValue(':Email', $_POST['email'], PDO::PARAM_STR);
 
         // We gaan de query uitvoeren op de mysql-server
         $statement->execute();
