@@ -88,17 +88,34 @@ $result = $statement->fetch(PDO::FETCH_OBJ);
 
     <form action="update.php" method="post">
 
-        <label for="firstname">Voornaam:</label><br>
-        <input type="text" name="firstname" id="firstname" value="<?php echo $result->Voornaam; ?>"><br><br>
+        <label for="homeclub">Kies je homeclub:</label><br>
+        <input type="radio" name="homeclub" id="homeclub" value="<?php echo $result->Homeclub; ?>"><br><br>
+
+
+
+
+
+
+
+
 
         <label for="infix">Tussenvoegsel:</label><br>
-        <input type="text" name="infix" id="infix" value="<?php echo $result->Tussenvoegsel; ?>"><br><br>
+        <select name="infix" id="infix" value="<?php echo $result->Tussenvoegsel; ?>"><br><br>
 
         <label for="lastname">Achternaam:</label><br>
         <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
+        
+        <label for="lastname">Achternaam:</label><br>
+        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
+        
+        <label for="lastname">Achternaam:</label><br>
+        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
+        
+        <label for="lastname">Achternaam:</label><br>
+        <input type="text" name="lastname" id="lastname" value="<?php echo $result->Achternaam; ?>"><br><br>
 
-        <label for="number">Telefoonnummer:</label><br>
-        <input type="tel" name="number" id="number" value="<?php echo $result->Telefoonnummer; ?>"><br><br>
+        <label for="email">E-mail</label><br>
+        <input type="text" name="email" id="email" value="<?php echo $result->Email; ?>"><br>
 
         <input type="hidden" name="Id" value="<?php echo $result->Id; ?>">
 

@@ -12,6 +12,7 @@
     <h1>Basic-Fit Utrecht</h1>
 
     <form action="create.php" method="post">
+        
         <label for="homeclub">Kies je homeclub:</label><br>
         <select name="homeclub" id="homeclub">
             <option value="">Kies je locatie</option>
