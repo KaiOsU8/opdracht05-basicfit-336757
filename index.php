@@ -12,17 +12,38 @@
     <h1>PDO CRUD</h1>
 
     <form action="create.php" method="post">
-        <label for="firstname">Voornaam:</label><br>
-        <input type="text" name="firstname" id="firstname"><br>
+        <label for="homeclub">Kies je homeclub:</label><br>
+        <select name="homeclub" id="homeclub">
+            <option value="">Kies je locatie</option>
+            <option value="">Franciscusdreef 80</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select><br><br>
 
-        <label for="infix">Tussenvoegsel:</label><br>
-        <input type="text" name="infix" id="infix"><br>
+        <p>Selecteer een lidmaatschap</p><br>
+        <label for="">Lidmaatschap</label><br>
+        <input type="text" name="" id=""><br><br>
 
-        <label for="lastname">Achternaam:</label><br>
-        <input type="text" name="lastname" id="lastname"><br>
+        <p>Looptijd:</p><br>
+        <label for="">Looptijd</label><br>
+        <input type="text" name="" id=""><br><br>
 
-        <label for="number">Telefoonnummer:</label><br>
-        <input type="tel" name="number" id="number"><br><br>
+        <p>Selecteer je extra's</p><br>
+        <label for="">Yanga</label><br>
+        <input type="text" name="" id=""><br><br>
+
+        <label for="">Coach</label><br>
+        <input type="text" name="" id=""><br><br>
+
+        <label for="">Training</label><br>
+        <input type="text" name="" id=""><br><br>
+
+        <label for="email">E-mail</label><br>
+        <input type="text" name="email" id="email"><br><br>
 
         <input type="submit" value="Verstuur">
     </form>

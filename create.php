@@ -15,21 +15,30 @@ try {
 }
 // Maak de sql query voor het inserten van een record
 $sql = "INSERT INTO Inschrijving (Id
-                            ,Voornaam
-                            ,Tussenvoegsel
-                            ,Achternaam
-                            ,Telefoonnummer)
+                            ,Homeclub
+                            ,Lidmaatschap
+                            ,Looptijd
+                            ,Yanga
+                            ,Coach
+                            ,Training
+                            ,Email)
         VALUES              (NULL
-                            ,:firstname
-                            ,:infix
-                            ,:lastname
-                            ,:number);";
+                            ,:homeclub
+                            ,:lidmaatschap
+                            ,:looptijd
+                            ,:yanga
+                            ,:coach
+                            ,:training
+                            ,:email);";
 // Maak de query gereed met de prepare-method van het $pdo-object
 $statement = $pdo->prepare($sql);
-$statement->bindValue(':firstname', $_POST['firstname'], PDO::PARAM_STR);
-$statement->bindValue(':infix', $_POST['infix'], PDO::PARAM_STR);
-$statement->bindValue(':lastname', $_POST['lastname'], PDO::PARAM_STR);
-$statement->bindValue(':number', $_POST['number'], PDO::PARAM_STR);
+$statement->bindValue(':homeclub', $_POST['homeclub'], PDO::PARAM_STR);
+$statement->bindValue(':lidmaatschap', $_POST['lidmaatschap'], PDO::PARAM_STR);
+$statement->bindValue(':looptijd', $_POST['looptijd'], PDO::PARAM_STR);
+$statement->bindValue(':yanga', $_POST['yanga'], PDO::PARAM_STR);
+$statement->bindValue(':coach', $_POST['coach'], PDO::PARAM_STR);
+$statement->bindValue(':training', $_POST['training'], PDO::PARAM_STR);
+$statement->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
 // Vuur de query af op de database...
 $statement->execute();
 

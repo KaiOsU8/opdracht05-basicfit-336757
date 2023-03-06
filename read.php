@@ -22,10 +22,13 @@ try {
  */
 
 $sql = "SELECT Id
-              ,Voornaam
-              ,Tussenvoegsel
-              ,Achternaam
-              ,Telefoonnummer
+                ,Homeclub
+                ,Lidmaatschap
+                ,Looptijd
+                ,Yanga
+                ,Coach
+                ,Training
+                ,Email
         FROM Inschrijving";
 
 //Bereid de de query voor met de method prepare
@@ -42,10 +45,13 @@ $tableRows = "";
 
 foreach($result as $info) {
     $tableRows .= "<tr>
-                        <td>$info->Voornaam</td>
-                        <td>$info->Tussenvoegsel</td>
-                        <td>$info->Achternaam</td>
-                        <td>$info->Telefoonnummer</td>
+                        <td>$info->Homeclub</td>
+                        <td>$info->Lidmaatschap</td>
+                        <td>$info->Looptijd</td>
+                        <td>$info->Yanga</td>
+                        <td>$info->Coach</td>
+                        <td>$info->Training</td>
+                        <td>$info->Email</td>
                         <td>
                             <a href='delete.php?Id=$info->Id'>
                                 <img src='img/b_drop.png' alt='cross'>
@@ -59,7 +65,7 @@ foreach($result as $info) {
                    </tr>";
 }
 ?>
-<h3>Persoonsgegevens</h3>
+<h3>Basic-Fit Utrecht</h3>
 
 <a href="index.php">
     <input type="button" value="Maak een nieuw record">
@@ -68,10 +74,13 @@ foreach($result as $info) {
 <br><br>
 <table border='1'>
     <thead>
-        <th>Voornaam</th>
-        <th>Tussenvoegsel</th>
-        <th>Achternaam</th>
-        <th>Telefoonnummer</th>
+        <th>Homeclub</th>
+        <th>Lidmaatschap</th> 
+        <th>Looptijd</th>
+        <th>Yanga</th>
+        <th>Coach</th>
+        <th>Training</th>
+        <th>Email</th>
         <th></th>
         <th></th>
     </thead>
