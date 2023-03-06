@@ -26,7 +26,7 @@ $sql = "SELECT Id
               ,Tussenvoegsel
               ,Achternaam
               ,Telefoonnummer
-        FROM Persoon";
+        FROM Inschrijving";
 
 //Bereid de de query voor met de method prepare
 $statement = $pdo->prepare($sql);

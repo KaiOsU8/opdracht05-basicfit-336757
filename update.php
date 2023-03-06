@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo "skdf";exit();
     try {
         // Maak een update query voor het updaten van een record
-        $sql = "UPDATE Persoon
+        $sql = "UPDATE Inschrijving
                 SET Voornaam = :Voornaam,
                     Tussenvoegsel = :Tussenvoegsel,
                     Achternaam = :Achternaam,
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Maak een select-query
-$sql = "SELECT * FROM Persoon 
+$sql = "SELECT * FROM Inschrijving 
         WHERE Id = :Id";
 
 // Voorbereiden van de query

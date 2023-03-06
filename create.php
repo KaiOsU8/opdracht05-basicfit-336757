@@ -14,7 +14,7 @@ try {
     echo "Systeemmelding: " . $e->getMessage();
 }
 // Maak de sql query voor het inserten van een record
-$sql = "INSERT INTO Persoon (Id
+$sql = "INSERT INTO Inschrijving (Id
                             ,Voornaam
                             ,Tussenvoegsel
                             ,Achternaam
